@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Home from "./components/Home";
+import About from "./components/About";
+import Login from "./components/Login";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <AuthProvider>
+            <Routes>
+                <Route
+                    path="/home"
+                    element={
+                        <ProtectedRoute
+                            Component={Home}
+                            roles={["dev", "pl", "pm"]}
+                        />
+                    }
+                ></Route>
+                <Route
+                    path="/about"
+                    element={
+                        <ProtectedRoute Component={About} roles={["pm"]} />
+                    }
+                ></Route>
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="*" element={<Navigate to="/home" />} />
+            </Routes>
+        </AuthProvider>
+    );
 }
 
 export default App;
