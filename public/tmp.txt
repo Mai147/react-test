@@ -1,0 +1,90 @@
+Input: Kẹo
+Output: Tan trong nước 10 độ C 24h
+Phân vùng:
+	Tan
+	Không tan
+-	Tan trong nước 1-10 độ C từ 0-24h => Tan
+-	Tan trong nước 1-10 độ C > 24h => Không tan
+-	Tan trong nước < 1 độ C => Không tan
+-	Tan trong nước > 10 độ C => Không tan
+-	Không tan trong nước => Không tan
+Test case với giá trị đại diện
+-	Tan trong nước 5 độ C trong 12h
+-	Tan trong nước 5 độ C trong 30h
+-	Tan trong nước ở -5 độ C
+-	Tan trong nước ở 15 độ C
+-	Không tan trong nước 
+Phân tích giá trị biên
+-	Giá trị biên: 1 độ C, 10 độ C, 0h, 24h
+Test case với giá trị biên
+-	Tan trong nước 1 độ C trong 0h
+-	Tan trong nước 1 độ C trong 24h 
+-	Tan trong nước 10 độ C trong 0h
+-	Tan trong nước 10 độ C trong 24h
+Test case với giá trị cận trên và cận dưới:
+-	Tan trong nước 0 độ C trong 0h
+-	Tan trong nước 0 độ C trong 1h 
+-	Tan trong nước 0 độ C trong 23h
+-	Tan trong nước 0 độ C trong 24h 
+-	Tan trong nước 0 độ C trong 25h
+-	Tan trong nước 1 độ C trong 1h 
+-	Tan trong nước 1 độ C trong 23h 
+-	Tan trong nước 1 độ C trong 25h
+-	Tan trong nước 2 độ C trong 0h
+-	Tan trong nước 2 độ C trong 1h 
+-	Tan trong nước 2 độ C trong 23h
+-	Tan trong nước 2 độ C trong 24h 
+-	Tan trong nước 2 độ C trong 25h
+-	Tan trong nước 9 độ C trong 0h
+-	Tan trong nước 9 độ C trong 1h 
+-	Tan trong nước 9 độ C trong 23h
+-	Tan trong nước 9 độ C trong 24h 
+-	Tan trong nước 9 độ C trong 25h
+-	Tan trong nước 10 độ C trong 1h 
+-	Tan trong nước 10 độ C trong 23h 
+-	Tan trong nước 10 độ C trong 25h
+-	Tan trong nước 11 độ C trong 0h
+-	Tan trong nước 11 độ C trong 1h 
+-	Tan trong nước 11 độ C trong 23h
+-	Tan trong nước 11 độ C trong 24h 
+-	Tan trong nước 11 độ C trong 25h
+Tổng hợp Testcase:
+-	Tan trong nước 0 độ C trong 0h => Không tan
+-	Tan trong nước 0 độ C trong 1h => Không tan
+-	Tan trong nước 0 độ C trong 23h => Không tan
+-	Tan trong nước 0 độ C trong 24h => Không tan
+-	Tan trong nước 0 độ C trong 25h => Không tan
+-	Tan trong nước 1 độ C trong 0h => Tan
+-	Tan trong nước 1 độ C trong 1h => Tan
+-	Tan trong nước 1 độ C trong 23h => Tan
+-	Tan trong nước 1 độ C trong 24h => Tan
+-	Tan trong nước 1 độ C trong 25h => Không tan
+-	Tan trong nước 2 độ C trong 0h => Tan
+-	Tan trong nước 2 độ C trong 1h => Tan
+-	Tan trong nước 2 độ C trong 23h => Tan
+-	Tan trong nước 2 độ C trong 24h => Tan
+-	Tan trong nước 2 độ C trong 25h => Không tan
+-	Tan trong nước ở 5 độ C trong 12h => Tan
+-	Tan trong nước 9 độ C trong 0h => Tan
+-	Tan trong nước 9 độ C trong 1h  => Tan
+-	Tan trong nước 9 độ C trong 23h => Tan
+-	Tan trong nước 9 độ C trong 24h => Tan
+-	Tan trong nước 9 độ C trong 25h => Không tan
+-	Tan trong nước 10 độ C trong 0h => Tan
+-	Tan trong nước 10 độ C trong 1h => Tan
+-	Tan trong nước 10 độ C trong 23h => Tan
+-	Tan trong nước 10 độ C trong 24h => Tan
+-	Tan trong nước 10 độ C trong 25h => Không tan
+-	Tan trong nước 11 độ C trong 0h => Không tan
+-	Tan trong nước 11 độ C trong 1h => Không tan
+-	Tan trong nước 11 độ C trong 23h => Không tan
+-	Tan trong nước 11 độ C trong 24h => Không tan
+-	Tan trong nước 11 độ C trong 25h => Không tan
+-	Tan trong nước 15 độ C trong 12h => Không tan
+-	Tan trong nước 15 độ C trong 30h => Không tan
+-	Không tan trong nước => Không tan
+Phân vùng kẹo:
+-	Kẹo đường: Nhiệt độ tan là 20 độ C => Tan trong nước 20 độ C => Không tan
+-	Socola: Nhiệt độ tan là 30 độ C => Tan trong nước 30 độ C => Không tan
+-	Kẹo cao su: Không tan trong nước => Không tan
+
